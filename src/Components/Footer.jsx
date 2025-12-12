@@ -1,5 +1,7 @@
-import { Link } from "lucide-react";
+import { Link } from "react-router-dom";
+
 import React from "react";
+import { Facebook, Instagram, X } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -93,15 +95,15 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/team"
                   className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Community
-                </a>
+                  Team
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
@@ -109,15 +111,15 @@ const Footer = () => {
                   <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Developer API
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/ppolicy"
                   className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Privacy & Security
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -129,13 +131,13 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about-us"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -146,7 +148,7 @@ const Footer = () => {
                   Careers
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
@@ -154,7 +156,7 @@ const Footer = () => {
                   <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Press
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#"
@@ -193,25 +195,25 @@ const Footer = () => {
                 href="#"
                 className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
               >
-                🐦
+                <Instagram />
+              </a>
+              {/* <a
+                href="#"
+                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
+              >
+                
+              </a> */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
+              >
+                <Facebook />
               </a>
               <a
                 href="#"
                 className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
               >
-                📘
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                📸
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                💼
+                <X />
               </a>
             </div>
           </div>
