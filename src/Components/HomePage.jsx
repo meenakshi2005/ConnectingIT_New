@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "./Hero"; // Your Hero component (update it to light mode as well)
 import Progress from "./Progress";
+import BrandLogoScroller from "./BrandLogo";
 
 const features = [
   { icon: "⚡", title: "Instant Activation", description: "Activate eSIM and cards instantly.," },
@@ -10,7 +11,7 @@ const features = [
 ];
 
 const products = [
-  { name: "International eSIM", description: "Stay connected worldwide", image: "https://europeesim.com/wp-content/uploads/2023/02/eSIM-Europe-p1-what-is-eSIM-2-1.jpg" },
+  { name: "International eSIM", description: "Stay connected worldwide", image: "https://www.mobilezguru.com/wp-content/uploads/2020/02/What-is-an-eSIM.jpg" },
   { name: "Payment Orchestration Platform", description: "Centralized payment management", image: "https://dazeinfo.com/wp-content/uploads/2021/02/onlinepayment-getty.jpg" },
   { name: "Prepaid Cards", description: "Flexible payments for everyone", image: "https://blog.xoxoday.com/content/images/2022/09/virtual-prepaid-reward-cards.png" },
 ];
@@ -95,14 +96,19 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center rounded-t-3xl">
-        <h2 className="text-4xl font-bold mb-6">Ready to simplify your fintech solutions?</h2>
-        <p className="text-lg mb-8">Start using ConnectingIT today and take control of your payments and connectivity.</p>
-        <button className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform duration-300">
-          Get Started
-        </button>
-      </section>
+    <section className="py-20 px-6 bg-gradient-to-r from-[#094370] to-[#0f6a94] text-white text-center rounded-t-3xl">
+  <h2 className="text-4xl font-bold mb-6">
+    Ready to simplify your fintech solutions?
+  </h2>
+  <p className="text-lg mb-8">
+    Start using ConnectingIT today and take control of your payments and connectivity.
+  </p>
+  <button className="px-8 py-4 rounded-full bg-white text-[#094370] font-semibold hover:bg-[#094370] hover:text-white hover:scale-105 transition-all duration-300 shadow-md">
+    Get Started
+  </button>
+</section>
 
+{/* <BrandLogoScroller /> */}
       {/* Footer */}
       <footer className="py-12 px-6 bg-gray-100 text-gray-600 text-center">
         {/* <p>&copy; {new Date().getFullYear()} ConnectingIT. All rights reserved.</p> */}

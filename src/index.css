@@ -2,5 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+:root {
+  --bg-dark: #f7f7f7;
+  --accent-purple: #094370;
+  --accent-pink: #094370;
+  --text-light: #094370;
+  --text-muted: #9fa3a7; 
+}
+#team {
+  background: white !important;
+}

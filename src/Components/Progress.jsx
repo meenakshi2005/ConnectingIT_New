@@ -5,23 +5,24 @@ const data = {
     title: "Stay connected anywhere with eSIM",
     description:
       "Activate international eSIM instantly without changing your SIM card. Enjoy seamless connectivity, high-speed data, and flexible plans for travelers.",
-    image: "https://miro.medium.com/v2/resize:fit:1358/1*qRg0buATOB7sJqtbRUHghg.jpeg",
+    image: "https://mobileworld.com.vn/uploads/news/05_2023/original_blog_13380_4odqehr742f7qei5nmufram8aezugghh.jpg",
     button: "Explore eSIM",
   },
   payments: {
-    title: "Centralized payment management",
-    description:
-      "Optimize your transactions with our Payment Orchestration Platform. Manage multiple gateways, automate routing, and get analytics for smarter business decisions.",
-    image: "https://cdn.zeebiz.com/hindi/sites/default/files/styles/zeebiz_850x478/public/2023/03/04/127539-payment.jpg",
-    button: "Explore Payments",
-  },
+  title: "Intelligent Payment Orchestration Platform",
+  description:
+    "Empower your business with smart routing, real-time dashboards, and PCI-DSS Level 1 security. Our platform optimizes success rates by 10%, reduces MDR, and ensures 99.9% uptime through auto-failover and SLA-backed performance — delivering reliable, compliant, and data-driven payment management.",
+  image: "https://cdn.zeebiz.com/hindi/sites/default/files/styles/zeebiz_850x478/public/2023/03/04/127539-payment.jpg",
+  button: "Discover Payment Platform",
+},
+
   prepaid: {
-    title: "Flexible prepaid cards for everyone",
-    description:
-      "Corporate, student, or travel cards — secure, globally accepted, and easy to top-up. Track your spending in real-time and enjoy worldwide coverage.",
-    image: "https://tse2.mm.bing.net/th/id/OIP.TNtdgJ9ybeKxUVDRNW5iHAHaE7?pid=Api&P=0&h=180",
-    button: "Explore Prepaid Cards",
-  },
+  title: "Comprehensive Prepaid Solutions for Every Need",
+  description:
+    "NPCI and Mastercard certified prepaid card issuance platform offering secure, reloadable, and non-reloadable cards. Manage full card lifecycle with Pine Perks API — empowering corporates, merchants, and individuals with seamless digital and physical prepaid experiences across 17 countries.",
+  image: "https://www.casita.com/images/files/public/19012023042223PM-shutterstock_1785960965.jpg",
+  button: "Discover Prepaid Solutions",
+},
   growth: {
     title: "Boost your business with fintech tools",
     description:
@@ -98,13 +99,19 @@ const Progress = () => {
         </div>
 
         <div className="mt-8 md:mt-0 md:ml-8 max-w-lg">
-          <p className="text-sm uppercase tracking-widest text-gray-500">{selected.toUpperCase()}</p>
-          <h2 className="text-4xl font-bold text-gray-800 mt-2 mb-4">{data[selected].title}</h2>
-          <p className="text-gray-600 mb-6">{data[selected].description}</p>
-          <button className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">
-            {data[selected].button}
-          </button>
-        </div>
+  <p className="text-sm uppercase tracking-widest text-gray-500">
+    {selected.toUpperCase()}
+  </p>
+  <h2 className="text-4xl font-bold text-gray-800 mt-2 mb-4">
+    {data[selected].title}
+  </h2>
+  <p className="text-gray-600 mb-6">{data[selected].description}</p>
+
+  <button className="bg-[#094370] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0f6a94] hover:scale-105 transition-all duration-300 shadow-md">
+    {data[selected].button}
+  </button>
+</div>
+
       </div>
     </div>
   );

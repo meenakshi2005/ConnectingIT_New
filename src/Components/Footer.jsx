@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -30,49 +31,51 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Column 1 - Products */}
           <div className="group">
-      <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-        Intuit Products
-      </h4>
-      <ul className="space-y-3 text-sm">
-        <li>
-          <a
-            href="#"
-            className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-            TurboTax
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-            QuickBooks
-          </a>
-        </li>
+            <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
+              Intuit Products
+            </h4>
+            <ul className="space-y-3 text-sm">
+              <li className="group">
+                <a
+                  href="https://esimnow.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  eSimNow.ai
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://epaynow.ai/"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  ePayNow.ai
+                </a>
+              </li>
 
-        <li>
-          <a
-            href="#"
-            className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-            Mailchimp
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-            Credit Karma
-          </a>
-        </li>
-      </ul>
-    </div>
+              {/* <li>
+                <a
+                  href="#"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  eCardNow.ai
+                </a>
+              </li> */}
+              <li>
+                <a
+                  href="https://espendnow.ai/"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  eSpendNow.ai
+                </a>
+              </li>
+            </ul>
+          </div>
 
           {/* Column 2 - Resources */}
           <div className="group">
@@ -179,7 +182,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-purple-500 transition-colors"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
+              <button className="px-6 py-2 bg-white text-[#094370] rounded-lg text-sm font-semibold border border-[#094370] hover:bg-[#094370] hover:text-white hover:shadow-lg transition-all duration-300">
                 Subscribe
               </button>
             </div>

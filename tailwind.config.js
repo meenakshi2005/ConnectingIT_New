@@ -7,7 +7,7 @@ export default {
     extend: {
       colors: {
         // Core Intuit Blue
-        primary: "#365EBF", // Intuit Cerulean Blue
+        primary: "#094370", 
         // Accent Colors
         secondary: "#F59E0B", // Warm accent (yellow)
         neutralLight: "#F3F4F6", // Light background gray
