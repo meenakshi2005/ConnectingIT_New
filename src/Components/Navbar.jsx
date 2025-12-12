@@ -7,6 +7,7 @@ const Navbar = () => {
   const closeTimeout = useRef(null);
 
   const menuItems = [
+    { name: "Home" , link: "/" }, // 🔥 Internal link
     {
       name: "Products",
       dropdown: [
@@ -15,7 +16,7 @@ const Navbar = () => {
         { name: "eSpendNow", link: "https://espendnow.ai/" },
       ],
     },
-    { name: "Support & Blogs" },
+    
     { name: "Our Team", link: "/team" }, // 🔥 Internal link
   ];
 
