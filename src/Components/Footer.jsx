@@ -188,7 +188,7 @@ const Footer = () => {
             </div>
 
             {/* Social links */}
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
               <a
                 href="#"
                 className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
@@ -213,7 +213,7 @@ const Footer = () => {
               >
                 💼
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -32,6 +32,7 @@ import Progress from "./Components/Progress";
 import Team from "./Components/Team";
 import Footer from "./Components/Footer";
 import BrandLogoScroller from "./Components/BrandLogo";
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
 
           {/* 👉 New Route for Our Team */}
           <Route path="/team" element={<Team />} />
+          <Route path="/contect" element={<ContactUs />} />
           <Route path="/brandlogo" element={<BrandLogoScroller />} />
         </Routes>
         <BrandLogoScroller />
