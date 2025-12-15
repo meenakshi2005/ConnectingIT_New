@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-slate-900/40 py-12 px-4 scroll-smooth">
+    <div className="min-h-screen bg-[#094370] py-12 px-4 scroll-smooth">
       <div className="max-w-5xl mx-auto">
         <article className="bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
           {/* Header / Hero */}
@@ -159,12 +160,12 @@ export default function AboutUs() {
                 >
                   Back to top
                 </a>
-                <a
-                  href="mailto:hello@connectingit.com"
+                <Link
+                  to="/contact"
                   className="inline-block text-sm font-medium px-4 py-2 rounded-md bg-sky-600 text-white hover:bg-sky-700"
                 >
                   Email Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

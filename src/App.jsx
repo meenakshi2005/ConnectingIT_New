@@ -11,6 +11,7 @@ import Footer from "./Components/Footer";
 import BrandLogoScroller from "./Components/BrandLogo";
 import PrivacyPolicy from "./Components/PPolicy";
 import AboutUs from "./AboutUs";
+import ContactUs from "./Components/ContactUs";
 
 // ScrollToTop defined inline — no extra file
 function ScrollToTop() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/ppolicy" element={<PrivacyPolicy />} />
           <Route path="/brandlogo" element={<BrandLogoScroller />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
 
         <BrandLogoScroller />

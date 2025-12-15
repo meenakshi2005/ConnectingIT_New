@@ -26,11 +26,7 @@ import image21 from "../assets/Images/Sachin.png";
 export default function Team() {
   const members = [
     { name: "Ramneek Kochar", role: "Chief Executive Officer", image: image1 },
-    {
-      name: "Dr. Ravi Ramakrishnan",
-      role: "Chief Technology Officer",
-      image: image2,
-    },
+    {name: "Dr. Ravi Ramakrishnan",role: "Chief Technology Officer",image: image2,},
     { name: "Abhay Shringi", role: "Chief Financial Officer", image: image3 },
     // { name: "Sales Manveet Singh", role: "Head ", image: image4 },
     { name: "Rahul Wali", role: "Head ", image: image5 },
@@ -54,32 +50,38 @@ export default function Team() {
 
   return (
     <>
-      <section className="py-16" id="team">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-            Meet Our Team
-          </h2>
+  <section className="py-20 bg-white" id="team">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center text-gray-900 mb-14">
+      Meet Our Team
+    </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {members.map((member, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition duration-300"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {member.name}
-                </h3>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      {members.map((member, index) => (
+        <div
+          key={index}
+          className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 flex flex-col items-center"
+        >
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-32 h-32 rounded-full object-cover shadow-md mb-4"
+          />
+
+          <h3 className="text-lg font-semibold text-gray-900 text-center">
+            {member.name}
+          </h3>
+
+          <p className="text-sm text-gray-600 mt-1 text-center">
+            {member.role}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* <BrandLogoScroller /> */}
     </>

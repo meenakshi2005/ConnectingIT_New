@@ -347,7 +347,7 @@ export default function ContactUs() {
                 <strong>Email:</strong> ravi@connictingit.in
               </p>
               <p className="text-gray-700">
-                <strong>Phone:</strong> +91-XXXXXXXXXX
+                <strong>Phone:</strong> +91-9891001443
               </p>
               <p className="text-gray-700">
                 <strong>Address:</strong> 20, ConsultIT House, Plot, West, opposite Bloom International School, TECHZONE 7, IT Plots, Milak Lachchhi, Greater Noida, Milak Lachchi, Uttar Pradesh 203207

@@ -86,13 +86,13 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -158,13 +158,13 @@ const Footer = () => {
                 </a>
               </li> */}
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -190,7 +190,7 @@ const Footer = () => {
             </div>
 
             {/* Social links */}
-            {/* <div className="flex gap-3">
+            <div className="flex gap-3">
               <a
                 href="#"
                 className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
@@ -215,7 +215,7 @@ const Footer = () => {
               >
                 <X />
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
 

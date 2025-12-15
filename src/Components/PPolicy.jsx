@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function PrivacyPolicy() {
   return (
@@ -213,10 +214,10 @@ export default function PrivacyPolicy() {
                 If you have questions or wish to exercise your rights, contact our
                 support team at{" "}
                 <a
-                  href="mailto:support@connectingit.com"
+                  href="mailto:ravi@connectingit.in"
                   className="text-sky-600 dark:text-sky-400 hover:underline"
                 >
-                  support@connectingit.com
+                  ravi@connectingit.in
                 </a>
                 .
               </p>
@@ -239,12 +240,12 @@ export default function PrivacyPolicy() {
                 >
                   Back to top
                 </a>
-                <a
-                  href="mailto:support@connectingit.com"
+                <Link
+                  to="/contact"
                   className="inline-block text-sm font-medium px-4 py-2 rounded-md bg-sky-600 text-white hover:bg-sky-700"
                 >
                   Contact Support
-                </a>
+                </Link>
               </div>
             </div>
           </div>
