@@ -112,15 +112,16 @@ const Footer = () => {
                   Developer API
                 </a>
               </li> */}
-              <li>
+               <li>
                 <Link
-                  to="/ppolicy"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                  to="/contact"
+                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
                 >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Privacy & Security
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Contact
                 </Link>
               </li>
+             
             </ul>
           </div>
 
@@ -140,13 +141,22 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/terms&conditions"
                   className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Careers
-                </a>
+                  Terms and Conditions
+                </Link>
+              </li>
+               <li>
+                <Link
+                  to="/ppolicy"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Privacy & Security
+                </Link>
               </li>
               {/* <li>
                 <a
@@ -157,15 +167,7 @@ const Footer = () => {
                   Press
                 </a>
               </li> */}
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Contact
-                </Link>
-              </li>
+             
             </ul>
           </div>
 

@@ -57,8 +57,8 @@ const Navbar = () => {
                 {/* 🔥 Internal link uses <Link>, External uses <a> */}
                 {item.link ? (
                   item.link.startsWith("http") ? (
-                    <a
-                      href={item.link}
+                    <Link
+                      to={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex items-center space-x-1 transition-colors duration-300 ${
@@ -66,7 +66,7 @@ const Navbar = () => {
                       }`}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ) : (
                     <Link
                       to={item.link}
@@ -97,14 +97,14 @@ const Navbar = () => {
                   <ul className="absolute top-full left-0 mt-3 w-52 bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.1)] z-20 animate-fadeIn">
                     {item.dropdown.map((subItem, i) => (
                       <li key={i}>
-                        <a
-                          href={subItem.link}
+                        <Link
+                          to={subItem.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-sm text-[#094370] hover:bg-[#094370]/10 transition-colors"
                         >
                           {subItem.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -166,9 +166,9 @@ const Navbar = () => {
                 {/* Mobile Internal/External Links */}
                 {item.link ? (
                   item.link.startsWith("http") ? (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Link to={item.link} target="_blank" rel="noopener noreferrer">
                       {item.name}
-                    </a>
+                    </Link>
                   ) : (
                     <Link to={item.link}>{item.name}</Link>
                   )
@@ -184,14 +184,14 @@ const Navbar = () => {
                 <ul className="pl-4 mt-2 space-y-2">
                   {item.dropdown.map((subItem, i) => (
                     <li key={i}>
-                      <a
-                        href={subItem.link}
+                      <Link
+                        to={subItem.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block text-sm hover:text-[#0b5a8a]"
                       >
                         {subItem.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

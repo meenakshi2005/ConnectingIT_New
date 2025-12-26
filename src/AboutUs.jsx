@@ -9,7 +9,7 @@ export default function AboutUs() {
           {/* Header / Hero */}
           <header className="px-8 py-8 md:py-10 bg-gradient-to-r from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
             <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">
-              About ConnectingIt
+              About Us
             </h1>
             <p className="mt-2 text-sm text-slate-500 dark:text-slate-400 max-w-2xl">
               We’re a fintech company building secure, intuitive, and delightful

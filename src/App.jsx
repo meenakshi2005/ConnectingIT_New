@@ -12,6 +12,7 @@ import BrandLogoScroller from "./Components/BrandLogo";
 import PrivacyPolicy from "./Components/PPolicy";
 import AboutUs from "./AboutUs";
 import ContactUs from "./Components/ContactUs";
+import TermsOfService from "./Components/Terms&conditions";
 
 // ScrollToTop defined inline — no extra file
 function ScrollToTop() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/hero" element={<Hero />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/terms&conditions" element={<TermsOfService />} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/ppolicy" element={<PrivacyPolicy />} />
           <Route path="/brandlogo" element={<BrandLogoScroller />} />

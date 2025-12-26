@@ -95,10 +95,9 @@ export default function PrivacyPolicy() {
             {/* Content sections */}
             <section id="overview" className="mb-6">
               <p className="text-slate-700 dark:text-slate-300">
-                This Privacy Policy explains how our fintech company (<strong>“we”</strong>,{" "}
-                <strong>“our”</strong>, <strong>“us”</strong>) collects, uses, discloses,
+                This Privacy Policy explains how our fintech company collects, uses, discloses,
                 and safeguards your information when you use our platform, mobile
-                application, or related services (<strong>“Services”</strong>).
+                application, or related services .
               </p>
             </section>
 
