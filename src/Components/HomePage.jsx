@@ -1,118 +1,136 @@
 import React from "react";
-import Hero from "./Hero"; // Your Hero component (update it to light mode as well)
+import Hero from "./Hero";
 import Progress from "./Progress";
-import BrandLogoScroller from "./BrandLogo";
+import ComplianceSummary from "./ComplienceSummary";
+import forexImage from "../assets/Images/Forex.jpg";
 
 const features = [
-  { icon: "⚡", title: "Instant Activation", description: "Activate eSIM and cards instantly.," },
+  { icon: "⚡", title: "Instant Activation", description: "Activate eSIM and cards instantly." },
   { icon: "🌍", title: "Global Coverage", description: "Connect anywhere with seamless network." },
   { icon: "📶", title: "High-Speed Data", description: "Enjoy fast and reliable connectivity." },
   { icon: "🔒", title: "Secure Payments", description: "Safe and compliant financial transactions." },
 ];
 
 const products = [
-  { name: "International eSIM", description: "Stay connected worldwide", image: "https://www.mobilezguru.com/wp-content/uploads/2020/02/What-is-an-eSIM.jpg" },
-  { name: "Payment Orchestration Platform", description: "Centralized payment management", image: "https://dazeinfo.com/wp-content/uploads/2021/02/onlinepayment-getty.jpg" },
-  { name: "Prepaid Cards", description: "Flexible payments for everyone", image: "https://blog.xoxoday.com/content/images/2022/09/virtual-prepaid-reward-cards.png" },
-];
-
-const testimonials = [
-  { name: "Sarah Chen", feedback: "ConnectingIT simplified our global payments and connectivity.", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
-  { name: "John Doe", feedback: "The platform is intuitive and the support is amazing!", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
-  { name: "Alice Brown", feedback: "We reduced transaction failures by 40% using their orchestration platform.", avatar: "https://randomuser.me/api/portraits/women/45.jpg" },
+  {
+    name: "International eSIM",
+    description: "Stay connected worldwide",
+    image: "https://www.mobilezguru.com/wp-content/uploads/2020/02/What-is-an-eSIM.jpg",
+  },
+  {
+    name: "Prepaid Cards",
+    description: "Flexible payments for everyone",
+    image: "https://blog.xoxoday.com/content/images/2022/09/virtual-prepaid-reward-cards.png",
+  },
+  {
+    name: "Digital Forex Card",
+    description: "Multi-currency card for seamless international spending",
+    image: forexImage,
+  },
+  {
+    name: "Payment Orchestration Platform",
+    description: "Smart routing, higher success rates, and unified payment management",
+    image: "https://images.unsplash.com/photo-1556742031-c6961e8560b0",
+  },
 ];
 
 const HomePage = () => {
   return (
-    <div className="bg-gray-50 text-gray-800">
-      {/* Hero Section */}
-      <Hero /> {/* Make sure Hero component uses light theme colors */}
-      <Progress />
+    <div className="bg-gray-300 text-gray-800">
+      
+      <Hero />
 
       {/* Features Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Why Choose ConnectingIT?</h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {features.map((feature, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+      <section id="why-us" className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Why Choose ConnectingIT?
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#094370] to-[#0f769e] mx-auto rounded-full"></div>
         </div>
-      </section>
 
-      {/* Products / Services */}
-      <section className="py-10 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Our Products</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {products.map((product, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-              <img src={product.image} alt={product.name} className="w-full h-60 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                <p className="text-gray-600">{product.description}</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, i) => (
+            <div
+              key={i}
+              className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#094370] to-[#0f769e] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-4xl text-[#094370] group-hover:text-white transition-colors duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm group-hover:text-white/95 transition-colors duration-300">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">How It Works</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <div className="text-4xl mb-4">1️⃣</div>
-            <h3 className="text-xl font-bold mb-2">Sign Up</h3>
-            <p className="text-gray-600">Create your account in seconds and get instant access.</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <div className="text-4xl mb-4">2️⃣</div>
-            <h3 className="text-xl font-bold mb-2">Choose Product</h3>
-            <p className="text-gray-600">Select eSIMs, prepaid cards or our POP platform according to your needs.</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <div className="text-4xl mb-4">3️⃣</div>
-            <h3 className="text-xl font-bold mb-2">Go Live</h3>
-            <p className="text-gray-600">Start using our services immediately with full global coverage.</p>
-          </div>
+      {/* Products Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our Products
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#094370] to-[#0f769e] mx-auto rounded-full"></div>
         </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">What Our Customers Say</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-              <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full mx-auto mb-4" />
-              <p className="text-gray-600 mb-4">"{t.feedback}"</p>
-              <h4 className="font-bold">{t.name}</h4>
+        {/* 4 Cards in One Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {products.map((product, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-[#094370] transition-colors duration-300">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-    <section className="py-20 px-6 bg-gradient-to-r from-[#094370] to-[#0f6a94] text-white text-center rounded-t-3xl">
-  <h2 className="text-4xl font-bold mb-6">
-    Ready to simplify your fintech solutions?
-  </h2>
-  <p className="text-lg mb-8">
-    Start using ConnectingIT today and take control of your payments and connectivity.
-  </p>
-  <button className="px-8 py-4 rounded-full bg-white text-[#094370] font-semibold hover:bg-[#094370] hover:text-white hover:scale-105 transition-all duration-300 shadow-md">
-    Get Started
-  </button>
-</section>
+      {/* Compliance Section */}
+      <section className="px-6 max-w-7xl mx-auto">
+        <ComplianceSummary />
+      </section>
 
-{/* <BrandLogoScroller /> */}
-      {/* Footer */}
-      <footer className="py-12 px-6 bg-gray-100 text-gray-600 text-center">
-        {/* <p>&copy; {new Date().getFullYear()} ConnectingIT. All rights reserved.</p> */}
-      </footer>
+      {/* CTA Section */}
+      <section className="py-14 px-6 bg-gradient-to-r from-[#094370] to-[#0f6a94] text-white text-center rounded-t-3xl">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Ready to simplify your fintech solutions?
+        </h2>
+        <p className="text-base mb-6 max-w-2xl mx-auto">
+          Start using ConnectingIT today and take control of your payments and connectivity.
+        </p>
+        <button className="px-7 py-3 rounded-full bg-white text-[#094370] font-semibold hover:bg-[#094370] hover:text-white transition shadow">
+          Get Started
+        </button>
+      </section>
+
+      <footer className="py-8 px-6 bg-gray-100 text-gray-600 text-center text-sm"></footer>
     </div>
   );
 };

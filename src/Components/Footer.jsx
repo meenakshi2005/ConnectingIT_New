@@ -6,13 +6,7 @@ import { Facebook, Instagram, X } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-primary text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
+     
 
       <div className="relative max-w-7xl mx-auto">
         {/* Logo and tagline */}
@@ -34,7 +28,7 @@ const Footer = () => {
           {/* Column 1 - Products */}
           <div className="group">
             <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-              Intuit Products
+              Products
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="group">
@@ -74,6 +68,15 @@ const Footer = () => {
                 >
                   <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   eSpendNow.ai
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eforexnow.ai/"
+                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  eForexNow.ai
                 </a>
               </li>
             </ul>

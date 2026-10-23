@@ -13,6 +13,7 @@ import PrivacyPolicy from "./Components/PPolicy";
 import AboutUs from "./AboutUs";
 import ContactUs from "./Components/ContactUs";
 import TermsOfService from "./Components/Terms&conditions";
+import CertificationCard from "./Components/Compliences";
 
 // ScrollToTop defined inline — no extra file
 function ScrollToTop() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/ppolicy" element={<PrivacyPolicy />} />
           <Route path="/brandlogo" element={<BrandLogoScroller />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/compliance" element={<CertificationCard />} />
         </Routes>
 
         <BrandLogoScroller />

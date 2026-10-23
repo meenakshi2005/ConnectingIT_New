@@ -10,7 +10,7 @@ import image9 from "../assets/Images/Ankur.png";
 import image10 from "../assets/Images/Meenakshi.png";
 import image11 from "../assets/Images/Shankar.png";
 import image12 from "../assets/Images/himanshu.png";
-import image13 from "../assets/Images/Yashi.png";
+import image13 from "../assets/Image/Yashi.png";
 import image14 from "../assets/Images/Manu.png";
 import image15 from "../assets/Images/Chandni.png";
 import image16 from "../assets/Images/Yashtyagi.png";
