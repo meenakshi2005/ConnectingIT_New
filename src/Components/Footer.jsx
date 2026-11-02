@@ -1,253 +1,102 @@
+import React from "react";
+import { ArrowRight, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import React from "react";
-import { Facebook, Instagram, X } from "lucide-react";
+const productLinks = [
+  { name: "ePayNow", href: "https://epaynow.ai/" },
+  { name: "eSimNow", href: "https://esimnow.ai/" },
+  { name: "eSpendNow", href: "https://espendnow.ai/" },
+  { name: "eForexNow", href: "https://eforexnow.ai/" },
+];
 
-const Footer = () => {
+const companyLinks = [
+  { name: "About us", to: "/about-us" },
+  { name: "Our team", to: "/team" },
+  { name: "Contact", to: "/contact" },
+  { name: "Compliance", to: "/compliance" },
+];
+
+const legalLinks = [
+  { name: "Terms & conditions", to: "/terms&conditions" },
+  { name: "Privacy & security", to: "/ppolicy" },
+];
+
+export default function Footer() {
   return (
-    <footer className="bg-primary text-white py-16 px-6">
-     
-
-      <div className="relative max-w-7xl mx-auto">
-        {/* Logo and tagline */}
-        {/* <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primaryLight rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <img
-                src="./images/logo1.png"
-                alt="Logo"
-                className="h-20 w-45 object-contain"
-              />
-            </div>
-          </div>
-        </div> */}
-
-        {/* Main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-          {/* Column 1 - Products */}
-          <div className="group">
-            <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-              Products
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li className="group">
-                <a
-                  href="https://esimnow.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  eSimNow.ai
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://epaynow.ai/"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  ePayNow.ai
-                </a>
-              </li>
-
-              {/* <li>
-                <a
-                  href="#"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  eCardNow.ai
-                </a>
-              </li> */}
-              <li>
-                <a
-                  href="https://espendnow.ai/"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  eSpendNow.ai
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://eforexnow.ai/"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  eForexNow.ai
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 2 - Resources */}
-          <div className="group">
-            <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-              Resources
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/team"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Team
-                </Link>
-              </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Developer API
-                </a>
-              </li> */}
-               <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Contact
-                </Link>
-              </li>
-             
-            </ul>
-          </div>
-
-          {/* Column 3 - Company */}
-          <div className="group">
-            <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-              Company
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  to="/about-us"
-                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms&conditions"
-                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Terms and Conditions
-                </Link>
-              </li>
-               <li>
-                <Link
-                  to="/ppolicy"
-                  className="hover:text-[#d6ffa1] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#d6ffa1] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Privacy & Security
-                </Link>
-              </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Press
-                </a>
-              </li> */}
-             
-            </ul>
-          </div>
-
-          {/* Column 4 - Newsletter */}
-          <div className="lg:col-span-2">
-            <h4 className="text-base font-bold mb-6 bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
-              Stay Connected
-            </h4>
-            <p className="text-sm text-gray-400 mb-4">
-              Get the latest updates and exclusive offers delivered to your
-              inbox.
+    <footer className="site-footer relative overflow-hidden bg-[#071b2d] px-6 pb-6 pt-14 text-white sm:px-10 sm:pt-16 lg:px-12">
+      <div className="footer-glow pointer-events-none absolute -right-40 -top-48 h-[30rem] w-[30rem] rounded-full" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl">
+        <div className="grid gap-10 border-b border-white/10 pb-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.1fr] lg:gap-12 lg:pb-12">
+          <div className="max-w-sm">
+            <Link to="/" className="inline-flex rounded-xl bg-white px-3 py-1.5" aria-label="ConnectingIT home">
+              <img src="/image.png" alt="ConnectingIT" width="160" height="64" loading="lazy" className="h-12 w-auto object-contain" />
+            </Link>
+            <p className="mt-5 text-sm leading-7 text-slate-300">
+              Payments, cards and global connectivity — thoughtfully connected for the way business moves.
             </p>
-            <div className="flex gap-2 mb-6">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-sm focus:outline-none focus:border-purple-500 transition-colors"
-              />
-              <button className="px-6 py-2 bg-white text-[#094370] rounded-lg text-sm font-semibold border border-[#094370] hover:bg-[#094370] hover:text-white hover:shadow-lg transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
+            <Link to="/contact" className="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition-colors hover:text-white">
+              Let&apos;s talk
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
 
-            {/* Social links */}
-            <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                <Instagram />
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Products</h2>
+            <ul className="mt-5 space-y-3">
+              {productLinks.map((item) => (
+                <li key={item.name}>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="footer-link group inline-flex items-center gap-1.5 text-sm text-slate-300">
+                    {item.name}
+                    <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Explore</h2>
+            <ul className="mt-5 space-y-3">
+              {companyLinks.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="footer-link text-sm text-slate-300">{item.name}</Link>
+                </li>
+              ))}
+              {legalLinks.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="footer-link text-sm text-slate-300">{item.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Get in touch</h2>
+            <p className="mt-5 text-sm leading-6 text-slate-300">
+              Have a question or exploring a partnership? We&apos;d love to hear from you.
+            </p>
+            <div className="mt-4 space-y-3">
+              <a href="mailto:ravi@connectingit.in" className="footer-link inline-flex items-center gap-2.5 text-sm text-slate-300">
+                <Mail className="h-4 w-4 text-cyan-300" />
+                ravi@connectingit.in
               </a>
-              {/* <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                
-              </a> */}
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                <Facebook />
+              <a href="tel:+919891001443" className="footer-link inline-flex items-center gap-2.5 text-sm text-slate-300">
+                <Phone className="h-4 w-4 text-cyan-300" />
+                +91 98910 01443
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-110 text-lg"
-              >
-                <X />
-              </a>
+              <p className="flex items-start gap-2.5 text-sm leading-6 text-slate-400">
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-cyan-300" />
+                Greater Noida West, Uttar Pradesh, India
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom section */}
-        <div className="pt-8 border-t border-slate-700/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            {/* <p>© 2023. All Rights Reserved.</p> */}
-            {/* <div className="flex gap-6">
-              <a href="#" className="hover:text-purple-400 transition-colors">
-                Terms
-              </a>
-              <a href="#" className="hover:text-purple-400 transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-purple-400 transition-colors">
-                Cookies
-              </a>
-            </div> */}
-            {/* <p className="flex items-center gap-2">
-              Made with <span className="text-red-500 animate-pulse">❤️</span>{" "}
-              using React & Tailwind CSS
-            </p> */}
-          </div>
+        <div className="flex flex-col gap-3 pt-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} ConnectingIT Technologies Pvt Ltd. All rights reserved.</p>
+          <p className="text-slate-500">Connecting people, payments and possibilities.</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

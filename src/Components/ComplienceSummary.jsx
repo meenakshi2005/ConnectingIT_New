@@ -1,176 +1,13 @@
-
-// import { ShieldCheck, Lock, Cloud, Cpu, RefreshCcw, CheckCircle2, ArrowRight } from "lucide-react";
-// import { Link } from "react-router-dom";
-
-// const complianceItems = [
-//   {
-//     icon: ShieldCheck,
-//     title: "Information Security",
-//     standards: ["ISO/IEC 27001:2022"],
-//     color: "from-[#488B73] to-[#3a6f5c]",
-//   },
-//   {
-//     icon: Lock,
-//     title: "Privacy Protection",
-//     standards: ["ISO/IEC 27701:2019"],
-//     color: "from-[#488B73] to-[#3a6f5c]",
-//   },
-//   {
-//     icon: Cloud,
-//     title: "Cloud Security",
-//     standards: ["ISO/IEC 27017:2015", "ISO/IEC 27018:2019"],
-//     color: "from-[#488B73] to-[#3a6f5c]",
-//   },
-//   {
-//     icon: Cpu,
-//     title: "AI Governance",
-//     standards: ["ISO/IEC 42001:2023"],
-//     color: "from-[#488B73] to-[#3a6f5c]",
-//   },
-//   {
-//     icon: RefreshCcw,
-//     title: "Service Continuity",
-//     standards: ["ISO/IEC 20000-1:2018", "ISO 22301:2019"],
-//     color: "from-[#488B73] to-[#3a6f5c]",
-//   },
-// ];
-
-// export default function ComplianceSummary() {
-//   return (
-//     <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-50 px-6 py-16 overflow-hidden">
-//       {/* Background Pattern */}
-//       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM0ODhCNzMiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50"></div>
-      
-//       <div className="relative max-w-7xl mx-auto">
-//         {/* Header */}
-//         <div className="text-center mb-12">
-//           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#488B73]/10 text-[#488B73] rounded-full mb-4 border border-[#488B73]/20">
-//             <CheckCircle2 className="w-4 h-4" />
-//             <span className="text-sm font-semibold">Certified & Compliant</span>
-//           </div>
-          
-//           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-//             Security, Privacy & Compliance
-//           </h2>
-//           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-//             Our systems and processes are independently certified against
-//             internationally recognized ISO/IEC standards for security, privacy,
-//             cloud operations, AI governance, and business continuity.
-//           </p>
-//         </div>
-
-//         {/* Compliance Cards */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
-//           {complianceItems.map((item, idx) => {
-//             const Icon = item.icon;
-//             return (
-//               <div
-//                 key={idx}
-//                 className="group relative bg-white rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-300 border-2 border-slate-100 hover:border-[#488B73]/30 overflow-hidden"
-//               >
-//                 {/* Decorative gradient on hover */}
-//                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#488B73] to-[#3a6f5c] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                
-//                 {/* Icon Container */}
-//                 <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-//                   <Icon className="w-8 h-8 text-white" />
-//                 </div>
-                
-//                 {/* Title */}
-//                 <h3 className="font-bold text-slate-900 mb-3 group-hover:text-[#488B73] transition-colors">
-//                   {item.title}
-//                 </h3>
-                
-//                 {/* Standards */}
-//                 <div className="space-y-1">
-//                   {item.standards.map((standard, stdIdx) => (
-//                     <p key={stdIdx} className="text-xs text-slate-600 leading-relaxed bg-slate-50 rounded-lg px-2 py-1">
-//                       {standard}
-//                     </p>
-//                   ))}
-//                 </div>
-                
-//                 {/* Verified Badge */}
-//                 <div className="mt-4 pt-4 border-t border-slate-100">
-//                   <div className="flex items-center justify-center gap-1 text-xs text-[#488B73] font-medium">
-//                     <CheckCircle2 className="w-3 h-3" />
-//                     <span>Verified</span>
-//                   </div>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-
-//         {/* CTA Section */}
-//         <div className="bg-gradient-to-br from-[#488B73] to-[#3a6f5c] rounded-2xl p-8 shadow-xl relative overflow-hidden">
-//           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzR2Mi0oaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-          
-//           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
-//             <div className="text-center md:text-left">
-//               <h3 className="text-2xl font-bold text-white mb-2">
-//                 Want to learn more about our certifications?
-//               </h3>
-//               <p className="text-white/90">
-//                 Explore detailed information about our compliance standards and security practices
-//               </p>
-//             </div>
-            
-//             <Link
-//               to="/compliance"
-//               className="flex-shrink-0 group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#488B73] font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
-//             >
-//               View All Certifications
-//               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* Trust Indicators */}
-//         {/* <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-//           <div>
-//             <div className="text-3xl font-bold text-[#488B73] mb-1">8+</div>
-//             <div className="text-sm text-slate-600">Certifications</div>
-//           </div>
-//           <div>
-//             <div className="text-3xl font-bold text-[#488B73] mb-1">5</div>
-//             <div className="text-sm text-slate-600">ISO Standards</div>
-//           </div>
-//           <div>
-//             <div className="text-3xl font-bold text-[#488B73] mb-1">100%</div>
-//             <div className="text-sm text-slate-600">Compliance</div>
-//           </div>
-//           <div>
-//             <div className="text-3xl font-bold text-[#488B73] mb-1">24/7</div>
-//             <div className="text-sm text-slate-600">Monitoring</div>
-//           </div> */}
-//         {/* </div> */}
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
 import {
-  ShieldCheck,
-  Lock,
+  ArrowRight,
+  CheckCircle2,
   Cloud,
   Cpu,
+  Lock,
   RefreshCcw,
-  CheckCircle2,
-  ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const complianceItems = [
@@ -178,120 +15,125 @@ const complianceItems = [
     icon: ShieldCheck,
     title: "Information Security",
     standards: ["ISO/IEC 27001:2022"],
-    color: "from-[#094370] to-[#063458]",
   },
   {
     icon: Lock,
     title: "Privacy Protection",
     standards: ["ISO/IEC 27701:2019"],
-    color: "from-[#094370] to-[#063458]",
   },
   {
     icon: Cloud,
     title: "Cloud Security",
     standards: ["ISO/IEC 27017:2015", "ISO/IEC 27018:2019"],
-    color: "from-[#094370] to-[#063458]",
   },
   {
     icon: Cpu,
     title: "AI Governance",
     standards: ["ISO/IEC 42001:2023"],
-    color: "from-[#094370] to-[#063458]",
   },
   {
     icon: RefreshCcw,
     title: "Service Continuity",
     standards: ["ISO/IEC 20000-1:2018", "ISO 22301:2019"],
-    color: "from-[#094370] to-[#063458]",
   },
 ];
 
 export default function ComplianceSummary() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-50 px-6 py-16 overflow-hidden border rounded-lg">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwOTQzNzAiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
+    <section className="compliance-section relative isolate overflow-hidden rounded-[2rem] border border-slate-200/80 px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+      <div className="pointer-events-none absolute -right-24 -top-32 -z-10 h-96 w-96 rounded-full bg-cyan-100/70 blur-3xl" aria-hidden="true" />
+      <div className="pointer-events-none absolute -bottom-40 -left-24 -z-10 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl" aria-hidden="true" />
 
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center">
-
-          <h2 className="text-4xl font-bold text-[#094370] mb-4">
-            Security, Privacy & Compliance
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.55, ease: "easeOut" }}
+          className="mx-auto mb-10 max-w-3xl text-center sm:mb-12"
+        >
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-800/10 bg-white/80 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.19em] text-cyan-900 shadow-sm sm:text-xs">
+            <CheckCircle2 className="h-3.5 w-3.5 text-teal-600" />
+            A foundation of trust
+          </span>
+          <h2 className="text-balance text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl md:text-[2.75rem]">
+            Security is not an add-on.
+            <span className="block text-[#0b6683]">It&apos;s built into everything.</span>
           </h2>
-
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Our systems and processes are independently certified against
-            internationally recognized ISO/IEC standards for security, privacy,
-            cloud operations, AI governance, and business continuity.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+            Our systems and processes are independently certified against internationally recognized ISO/IEC standards for security, privacy, cloud operations, AI governance, and business continuity.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Compliance Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-5">
           {complianceItems.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
-                key={idx}
-                className="group relative bg-white rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-300 border-2 border-slate-100 hover:border-[#094370]/30 overflow-hidden"
+              <motion.article
+                key={item.title}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45, delay: idx * 0.07, ease: "easeOut" }}
+                className="compliance-card group relative flex min-h-[225px] flex-col overflow-hidden rounded-2xl border p-5 shadow-[0_8px_28px_rgba(15,23,42,0.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(8,47,73,0.1)] sm:p-5"
               >
-                {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#094370] to-[#063458] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-
-                {/* Icon */}
-                <div
-                  className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Icon className="w-8 h-8 text-white" />
+                <div className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-cyan-700/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="flex items-start justify-between gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0b4267] to-[#087e93] text-white shadow-[0_8px_18px_rgba(9,67,112,0.2)] transition duration-300 group-hover:rotate-[-4deg] group-hover:scale-105">
+                    <Icon className="h-5 w-5" strokeWidth={1.8} />
+                  </span>
+                  <span className="pt-1 text-[10px] font-semibold tracking-[0.15em] text-slate-300">
+                    0{idx + 1}
+                  </span>
                 </div>
-
-                {/* Title */}
-                <h3 className="font-bold text-slate-900 mb-3 group-hover:text-[#094370] transition-colors">
+                <h3 className="mt-5 text-base font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-[#0b6683]">
                   {item.title}
                 </h3>
-
-                {/* Standards */}
-                <div className="space-y-1">
-                  {item.standards.map((standard, stdIdx) => (
-                    <p
-                      key={stdIdx}
-                      className="text-xs text-slate-600 bg-slate-50 rounded-lg px-2 py-1"
+                <div className="mt-3 space-y-1.5">
+                  {item.standards.map((standard) => (
+                    <span
+                      key={standard}
+                      className="block rounded-lg border border-slate-100 bg-slate-50/90 px-2.5 py-1.5 text-[10px] font-medium leading-4 text-slate-600 sm:text-[11px]"
                     >
                       {standard}
-                    </p>
+                    </span>
                   ))}
                 </div>
-
-                {/* Verified */}
-                
-              </div>
+              </motion.article>
             );
           })}
         </div>
 
-        {/* CTA */}
-        <div className="bg-gradient-to-br from-[#094370] to-[#063458] rounded-2xl p-8 shadow-xl relative overflow-hidden">
-          <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Want to learn more about our certifications?
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 0.12, ease: "easeOut" }}
+          className="compliance-cta relative mt-6 overflow-hidden rounded-2xl px-6 py-7 text-white shadow-[0_18px_45px_rgba(8,41,67,0.18)] sm:px-8 sm:py-8"
+        >
+          <div className="pointer-events-none absolute -right-16 -top-28 h-64 w-64 rounded-full border border-cyan-200/10" aria-hidden="true" />
+          <div className="pointer-events-none absolute -right-4 -top-16 h-44 w-44 rounded-full border border-cyan-200/10" aria-hidden="true" />
+          <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-200">Clear standards. Confident decisions.</p>
+              <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                Want to take a closer look?
               </h3>
-              <p className="text-white/90">
-                Explore detailed information about our compliance standards and
-                security practices
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                Explore our certifications and the practices behind them.
               </p>
             </div>
-
             <Link
               to="/compliance"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-[#094370] font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all"
+              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#094370] transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-50 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
-              View All Certifications
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              View certifications
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

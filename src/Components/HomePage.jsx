@@ -1,138 +1,235 @@
 import React from "react";
-import Hero from "./Hero";
-import Progress from "./Progress";
+import { motion, useReducedMotion } from "framer-motion";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Globe2,
+  LockKeyhole,
+  RadioTower,
+  Route,
+  ShieldCheck,
+  Sparkles,
+  Zap,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 import ComplianceSummary from "./ComplienceSummary";
-import forexImage from "../assets/Images/Forex.jpg";
+import Hero from "./Hero";
 
-const features = [
-  { icon: "⚡", title: "Instant Activation", description: "Activate eSIM and cards instantly." },
-  { icon: "🌍", title: "Global Coverage", description: "Connect anywhere with seamless network." },
-  { icon: "📶", title: "High-Speed Data", description: "Enjoy fast and reliable connectivity." },
-  { icon: "🔒", title: "Secure Payments", description: "Safe and compliant financial transactions." },
-];
-
-const products = [
+const benefits = [
   {
-    name: "International eSIM",
-    description: "Stay connected worldwide",
-    image: "https://www.mobilezguru.com/wp-content/uploads/2020/02/What-is-an-eSIM.jpg",
+    icon: Zap,
+    number: "01",
+    title: "Move at the speed of ideas",
+    description: "Launch and manage financial products with streamlined tools built to reduce complexity.",
   },
   {
-    name: "Prepaid Cards",
-    description: "Flexible payments for everyone",
-    image: "https://blog.xoxoday.com/content/images/2022/09/virtual-prepaid-reward-cards.png",
+    icon: Globe2,
+    number: "02",
+    title: "Reach beyond borders",
+    description: "Connect customers and businesses to services designed for a world without boundaries.",
   },
   {
-    name: "Digital Forex Card",
-    description: "Multi-currency card for seamless international spending",
-    image: forexImage,
+    icon: LockKeyhole,
+    number: "03",
+    title: "Trust built in",
+    description: "Security, compliance and reliability are part of the platform from day one.",
   },
   {
-    name: "Payment Orchestration Platform",
-    description: "Smart routing, higher success rates, and unified payment management",
-    image: "https://images.unsplash.com/photo-1556742031-c6961e8560b0",
+    icon: Route,
+    number: "04",
+    title: "One connected platform",
+    description: "Bring payments, cards and connectivity together through a unified experience.",
   },
 ];
 
-const HomePage = () => {
+const solutions = [
+  {
+    icon: Globe2,
+    category: "CONNECTIVITY",
+    title: "Global eSIM",
+    description: "Give people reliable mobile data wherever business takes them.",
+    accent: "cyan",
+    metric: "Stay connected, everywhere",
+  },
+  {
+    icon: RadioTower,
+    category: "PAYMENTS",
+    title: "Payment orchestration",
+    description: "Manage payment flows with smart routing and a clearer view of performance.",
+    accent: "blue",
+    metric: "One layer. More control.",
+  },
+  {
+    icon: Sparkles,
+    category: "CARD PROGRAMS",
+    title: "Prepaid solutions",
+    description: "Create flexible prepaid experiences for customers, teams and partners.",
+    accent: "violet",
+    metric: "Designed around your needs",
+  },
+  {
+    icon: ShieldCheck,
+    category: "CROSS-BORDER",
+    title: "Digital forex",
+    description: "Make international spending simpler with multi-currency solutions.",
+    accent: "teal",
+    metric: "Spend with confidence",
+  },
+];
+
+function Reveal({ children, className = "", delay = 0 }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="bg-gray-300 text-gray-800">
-      
-      <Hero />
+    <motion.div
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.55, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
-      {/* Features Section */}
-      <section id="why-us" className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose ConnectingIT?
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#094370] to-[#0f769e] mx-auto rounded-full"></div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 group overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#094370] to-[#0f769e] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl text-[#094370] group-hover:text-white transition-colors duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm group-hover:text-white/95 transition-colors duration-300">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Products
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#094370] to-[#0f769e] mx-auto rounded-full"></div>
-        </div>
-
-        {/* 4 Cards in One Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-[#094370] transition-colors duration-300">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {product.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Compliance Section */}
-      <section className="px-6 max-w-7xl mx-auto">
-        <ComplianceSummary />
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-14 px-6 bg-gradient-to-r from-[#094370] to-[#0f6a94] text-white text-center rounded-t-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to simplify your fintech solutions?
-        </h2>
-        <p className="text-base mb-6 max-w-2xl mx-auto">
-          Start using ConnectingIT today and take control of your payments and connectivity.
-        </p>
-        <button className="px-7 py-3 rounded-full bg-white text-[#094370] font-semibold hover:bg-[#094370] hover:text-white transition shadow">
-          Get Started
-        </button>
-      </section>
-
-      <footer className="py-8 px-6 bg-gray-100 text-gray-600 text-center text-sm"></footer>
+function SectionHeading({ eyebrow, title, description, align = "center" }) {
+  return (
+    <div className={`mb-12 max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+      <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-700">{eyebrow}</p>
+      <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-slate-950 sm:text-4xl md:text-[2.75rem]">
+        {title}
+      </h2>
+      {description && <p className="mt-4 text-base leading-7 text-slate-600">{description}</p>}
     </div>
   );
-};
+}
 
-export default HomePage;
+export default function HomePage() {
+  return (
+    <main className="overflow-hidden bg-white text-slate-900">
+      <Hero />
+
+      <section id="why-us" className="relative px-6 py-20 sm:px-10 sm:py-24 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Built for what comes next"
+              title="The right tools. A better way forward."
+              description="We make it easier to connect people, businesses and opportunities with a thoughtful suite of financial and connectivity solutions."
+            />
+          </Reveal>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map(({ icon: Icon, number, title, description }, index) => (
+              <Reveal key={title} delay={index * 0.07}>
+                <article className="benefit-card group relative h-full overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-[0_18px_50px_rgba(8,47,73,0.09)]">
+                  <div className="mb-9 flex items-center justify-between">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-50 text-cyan-800 transition-colors group-hover:bg-[#094370] group-hover:text-white">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <span className="text-xs font-semibold tracking-widest text-slate-300">{number}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold tracking-tight text-slate-900">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="solutions" className="relative bg-[#f5f8fa] px-6 py-20 sm:px-10 sm:py-24 lg:px-12">
+        <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="A unified ecosystem"
+              title="Power every part of the journey."
+              description="Flexible products for modern businesses — designed to work beautifully on their own and even better together."
+            />
+          </Reveal>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {solutions.map(({ icon: Icon, category, title, description, accent, metric }, index) => (
+              <Reveal key={title} delay={index * 0.07}>
+                <article className={`solution-card solution-${accent} group flex h-full min-h-[310px] flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(8,47,73,0.1)]`}>
+                  <div className="relative flex h-36 items-center justify-center overflow-hidden bg-slate-50">
+                    <div className="solution-art absolute inset-0" aria-hidden="true" />
+                    <div className="solution-halo absolute h-28 w-28 rounded-full opacity-60 blur-2xl transition-transform duration-500 group-hover:scale-125" aria-hidden="true" />
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-[1.25rem] border border-white/80 bg-white/90 text-slate-800 shadow-[0_12px_35px_rgba(15,23,42,0.1)] transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-3">
+                      <Icon className="h-7 w-7" strokeWidth={1.7} />
+                    </div>
+                    <span className="absolute bottom-4 left-5 text-[10px] font-bold tracking-[0.17em] text-slate-500">{category}</span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h3 className="text-lg font-semibold tracking-tight text-slate-900">{title}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">{description}</p>
+                    <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                      <span className="text-xs font-medium text-slate-500">{metric}</span>
+                      <ArrowUpRight className="h-4 w-4 text-slate-400 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-700" />
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 sm:px-10 sm:py-20 lg:px-12">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#071b2d] px-7 py-10 text-white sm:px-12 sm:py-14">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
+            <Reveal className="max-w-2xl">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">Confidence, built in</p>
+              <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+                Designed with trust at the center.
+              </h2>
+              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+                Our security and compliance practices help create a dependable foundation for every connection and transaction.
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <Link
+                to="/compliance"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-200/60 hover:bg-white/5"
+              >
+                Explore our standards
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-8 sm:px-10 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <ComplianceSummary />
+        </div>
+      </section>
+
+      <section className="px-6 pb-20 pt-12 sm:px-10 sm:pb-24 lg:px-12">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="cta-panel relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0b4267] via-[#075678] to-[#087e93] px-7 py-12 text-center text-white sm:px-12 sm:py-16">
+            <div className="cta-orb absolute -right-12 -top-24 h-72 w-72 rounded-full border border-white/10" aria-hidden="true" />
+            <div className="cta-orb cta-orb-inner absolute -right-2 -top-14 h-52 w-52 rounded-full border border-white/10" aria-hidden="true" />
+            <p className="relative mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-100">Let&apos;s build what&apos;s next</p>
+            <h2 className="relative mx-auto max-w-3xl text-balance text-3xl font-semibold tracking-[-0.035em] sm:text-4xl md:text-5xl">
+              Ready to make your next move?
+            </h2>
+            <p className="relative mx-auto mt-4 max-w-xl text-sm leading-7 text-cyan-50/90 sm:text-base">
+              Tell us where you want to go. We&apos;ll help you find the right way to get there.
+            </p>
+            <Link
+              to="/contact"
+              className="group relative mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#094370] shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+            >
+              Start a conversation
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+    </main>
+  );
+}
